@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harshita Kshyp - Resume</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Charter:wght@400;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Charter", serif;
+        font-size: 10pt;
+        line-height: 1.4;
+        color: #000;
+        background: #fff;
+        padding: 20px;
+        max-width: 210mm;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .resume-container {
+        background: white;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        padding: 2cm;
+        margin-bottom: 40px;
+      }
+
+      .download-section {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .download-btn {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+      }
+
+      .download-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 1.5cm;
+      }
+
+      .name {
+        font-size: 25pt;
+        font-weight: 700;
+        margin-bottom: 5pt;
+      }
+
+      .contact-info {
+        font-size: 10pt;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .contact-separator {
+        margin: 0 5px;
+      }
+
+      .contact-item {
+        white-space: nowrap;
+      }
+
+      .contact-item a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      .contact-item a:hover {
+        text-decoration: underline;
+      }
+
+      .project-link {
+        color: #000;
+        text-decoration: none;
+        border-bottom: 1px dotted #666;
+        transition: all 0.2s ease;
+      }
+
+      .project-link:hover {
+        color: #667eea;
+        border-bottom: 1px solid #667eea;
+        text-decoration: none;
+      }
+
+      .section {
+        margin-bottom: 0.8cm;
+      }
+
+      .section-title {
+        font-size: 12pt;
+        font-weight: 700;
+        margin-bottom: 0.2cm;
+        border-bottom: 1pt solid #000;
+        padding-bottom: 1pt;
+      }
+
+      .two-col-entry {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 0.1cm;
+      }
+
+      .entry-left {
+        flex: 1;
+        font-weight: 700;
+      }
+
+      .entry-right {
+        min-width: 4.5cm;
+        text-align: right;
+        font-size: 9pt;
+      }
+
+      .highlights {
+        margin-left: 10pt;
+        margin-top: 0.1cm;
+      }
+
+      .highlights ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .highlights li {
+        margin-bottom: 0.1cm;
+        position: relative;
+        padding-left: 15px;
+      }
+
+      .highlights li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        font-size: 8pt;
+        top: 1px;
+      }
+
+      .one-col-entry {
+        margin-bottom: 0.2cm;
+      }
+
+      .tech-category {
+        font-weight: 700;
+      }
+
+      .last-updated {
+        position: absolute;
+        top: 1cm;
+        right: 2cm;
+        font-size: 8pt;
+        color: #666;
+        font-style: italic;
+      }
+
+      @media print {
+        body {
+          padding: 0;
+          box-shadow: none;
+        }
+        .download-section {
+          display: none;
+        }
+        .resume-container {
+          box-shadow: none;
+          padding: 2cm;
+        }
+      }
+
+      @media (max-width: 768px) {
+        body {
+          padding: 10px;
+        }
+
+        .resume-container {
+          padding: 1.5cm 1cm;
+        }
+
+        .contact-info {
+          flex-direction: column;
+          gap: 5px;
+        }
+
+        .contact-separator {
+          display: none;
+        }
+
+        .two-col-entry {
+          flex-direction: column;
+          gap: 5px;
+        }
+
+        .entry-right {
+          text-align: left;
+          min-width: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="download-section">
+      <button class="download-btn" onclick="downloadPDF()">
+        📄 Download Resume PDF
+      </button>
+    </div>
+
+    <div class="resume-container" id="resume-content">
+      <div class="last-updated">Last updated in September 2024</div>
+
+      <div class="header">
+        <div class="name">Harshita Kshyp</div>
+        <div class="contact-info">
+          <span class="contact-item">New Delhi, India</span>
+          <span class="contact-separator">|</span>
+          <span class="contact-item"
+            ><a href="mailto:hrsa.kshyp@gmail.com"
+              >hrsa.kshyp@gmail.com</a
+            ></span
+          >
+          <span class="contact-separator">|</span>
+          <span class="contact-item"
+            ><a href="tel:+91-9507860094">+91-9507860094</a></span
+          >
+          <span class="contact-separator">|</span>
+          <span class="contact-item"
+            ><a href="https://portfolio-hrshita.vercel.app/"
+              >portfolio-hrshita.vercel.app</a
+            ></span
+          >
+          <span class="contact-separator">|</span>
+          <span class="contact-item"
+            ><a href="https://linkedin.com/in/harshita-kshyp"
+              >linkedin.com/in/harshita-kshyp</a
+            ></span
+          >
+          <span class="contact-separator">|</span>
+          <span class="contact-item"
+            ><a href="https://github.com/hrshita-kshyp"
+              >github.com/hrshita-kshyp</a
+            ></span
+          >
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Professional Summary</div>
+        <div class="one-col-entry">
+          Experienced Frontend Developer with 1+ years of professional
+          experience at Tata Consultancy Services, specializing in React,
+          Angular, and TypeScript development. Proven track record of improving
+          application performance by 20% and admin workflow efficiency by 25%.
+          Expert in JavaScript ES6+, Redux state management, unit testing with
+          Jest, and modern web development frameworks. Strong background in
+          agile methodologies, CI/CD pipelines, and cross-functional
+          collaboration with UX designers and product managers.
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Experience</div>
+
+        <div class="two-col-entry">
+          <div class="entry-left">
+            <strong>Frontend Developer</strong>, Tata Consultancy Services – New
+            Delhi, India
+          </div>
+          <div class="entry-right">January 2025 – Present</div>
+        </div>
+        <div class="highlights">
+          <ul>
+            <li>
+              Developed Angular-based administrative features with reusable
+              components, REST API integration, and MongoDB backend, resulting
+              in 25% improvement in admin workflow efficiency
+            </li>
+            <li>
+              Enhanced frontend application performance by 20% through
+              implementing lazy loading, bundle optimization, and strategic
+              caching strategies
+            </li>
+            <li>
+              Authored comprehensive unit and integration tests using Jest and
+              Angular Testing Library, achieving 85%+ code coverage
+            </li>
+            <li>
+              Collaborated cross-functionally with product managers, UX
+              designers, and backend developers to deliver responsive,
+              cross-browser compatible user interfaces
+            </li>
+            <li>
+              Implemented CI/CD workflows using GitHub Actions for automated
+              testing and deployment processes
+            </li>
+          </ul>
+        </div>
+
+        <div class="two-col-entry" style="margin-top: 0.2cm">
+          <div class="entry-left">
+            <strong>Assistant System Engineer Trainee</strong>, Tata Consultancy
+            Services – New Delhi, India
+          </div>
+          <div class="entry-right">October 2024 – December 2024</div>
+        </div>
+        <div class="highlights">
+          <ul>
+            <li>
+              Developed comprehensive Airline Management System using Angular
+              frontend framework and Spring Boot backend architecture
+            </li>
+            <li>
+              Gained hands-on experience in agile software development
+              methodologies, team collaboration, and enterprise-level project
+              workflows
+            </li>
+            <li>
+              Participated in code reviews, sprint planning, and daily standups
+              following industry best practices
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Technical Projects</div>
+
+        <div class="two-col-entry">
+          <div class="entry-left">
+            <strong
+              ><a
+                href="https://ai-content-studio-one.vercel.app/"
+                target="_blank"
+                class="project-link"
+                >AI Content Generator Platform</a
+              ></strong
+            >
+          </div>
+          <div class="entry-right">React + Node.js + AI Analytics</div>
+        </div>
+        <div class="highlights">
+          <ul>
+            <li>
+              Strategic content intelligence platform that generates complete,
+              interconnected content ecosystems for different business scenarios
+            </li>
+            <li>
+              Creates strategic content campaigns across multiple formats,
+              channels, and stakeholder groups using advanced AI algorithms
+            </li>
+            <li>
+              Built with modern React architecture, Node.js backend, and
+              integrated AI APIs for content strategy optimization
+            </li>
+            <li>
+              Implemented user authentication, content versioning, and real-time
+              collaboration features
+            </li>
+          </ul>
+        </div>
+
+        <!-- <div class="two-col-entry" style="margin-top: 0.2cm">
+          <div class="entry-left">
+            <strong
+              ><a
+                href="https://github.com/hrshita-kshyp/Cab-Booking-System"
+                target="_blank"
+                class="project-link"
+                >Cab Booking Management System</a
+              ></strong
+            >
+          </div>
+          <div class="entry-right">Angular + Node.js + MongoDB</div>
+        </div> -->
+        <!-- <div class="highlights">
+          <ul>
+            <li>
+              Full-stack cab booking application with real-time GPS tracking,
+              dynamic fare calculation, and automated driver allocation
+            </li>
+            <li>
+              Implemented comprehensive user authentication system, admin
+              dashboard, and secure payment gateway integration
+            </li>
+            <li>
+              Built using Angular frontend, Node.js/Express backend, and MongoDB
+              database with RESTful API architecture
+            </li>
+            <li>
+              Features include ride history, rating system, push notifications,
+              and responsive cross-platform design
+            </li>
+          </ul>
+        </div> -->
+
+        <div class="two-col-entry" style="margin-top: 0.2cm">
+          <div class="entry-left">
+            <strong
+              ><a
+                href="https://portfolio-hrshita.vercel.app/"
+                target="_blank"
+                class="project-link"
+                >Professional Portfolio Website</a
+              ></strong
+            >
+          </div>
+          <div class="entry-right">HTML5 + Tailwind CSS + JavaScript</div>
+        </div>
+        <div class="highlights">
+          <ul>
+            <li>
+              Modern, responsive portfolio website showcasing technical skills,
+              projects, and professional experience
+            </li>
+            <li>
+              Features smooth animations, dark/light theme toggle, mobile-first
+              design with optimized performance
+            </li>
+            <li>
+              Built with semantic HTML5, Tailwind CSS utility-first framework,
+              and vanilla JavaScript for fast loading
+            </li>
+            <li>
+              Implemented contact form with validation, project filtering, and
+              SEO optimization for better visibility
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Education</div>
+        <div class="two-col-entry">
+          <div class="entry-left">
+            <strong>Bachelor of Technology (B.Tech)</strong>, BIT Sindri,
+            Dhanbad
+          </div>
+          <div class="entry-right">November 2020 – June 2024</div>
+        </div>
+        <div class="highlights">
+          <ul>
+            <li>
+              Relevant Coursework: Data Structures and Algorithms, Database
+              Management Systems, Software Engineering, Web Development,
+              Computer Networks
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Certifications</div>
+        <div class="one-col-entry">
+          <strong>Angular Development Training</strong> - TCS Internal Training
+          Program (2024)
+        </div>
+        <div class="one-col-entry">
+          <strong>Full Stack Web Development</strong> - TCS Professional
+          Development Course (2024)
+        </div>
+        <div class="one-col-entry">
+          <strong>JavaScript Essential Training</strong> - LinkedIn Learning
+          (2024)
+        </div>
+        <div class="one-col-entry">
+          <strong>React.js Development</strong> - LinkedIn Learning (2024)
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Technical Skills & Key Competencies</div>
+
+        <div class="one-col-entry">
+          <span class="tech-category">Programming Languages:</span>
+          JavaScript (ES6+), TypeScript, HTML5, CSS3, SQL
+        </div>
+
+        <div class="one-col-entry">
+          <span class="tech-category">Frontend Frameworks & Libraries:</span>
+          React, Angular, Redux, Tailwind CSS, Bootstrap, Responsive Web Design
+        </div>
+
+        <div class="one-col-entry">
+          <span class="tech-category">Backend & Databases:</span>
+          Node.js, Express.js, MongoDB, RESTful APIs, Database Design
+        </div>
+
+        <div class="one-col-entry">
+          <span class="tech-category">Development Tools & Methodologies:</span>
+          Git, GitHub, Webpack, Jest, Angular Testing Library, Postman, CI/CD,
+          GitHub Actions, Agile, Scrum
+        </div>
+
+        <div class="one-col-entry">
+          <span class="tech-category">Core Soft Skills:</span>
+          Problem Solving & Analytical Thinking, Cross-Functional Team
+          Collaboration, Time Management & Project Delivery
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Achievements</div>
+        <div class="highlights">
+          <ul>
+            <li>
+              <strong>Learning Achievement Award</strong>, TCS Gems program –
+              recognized for contribution & peer inspiration
+            </li>
+            <li>
+              Contributed to open-source during
+              <strong>Hacktoberfest</strong> with 10+ contributions
+            </li>
+            <li>
+              Increased coding club participation by
+              <strong>50%</strong> through workshops and events
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script>
+      // Method 1: Browser's native print to PDF (preserves links) - OPTIMIZED FOR ONE PAGE
+      function downloadPDFNative() {
+        // Hide download button temporarily
+        const downloadBtn = document.querySelector(".download-section");
+        downloadBtn.style.display = "none";
+
+        // Add print-specific styles for ONE PAGE optimization
+        const printStyles = document.createElement("style");
+        printStyles.innerHTML = `
+                @media print {
+                    @page { 
+                        margin: 0.5in 0.6in; 
+                        size: A4; 
+                    }
+                    body { 
+                        margin: 0; 
+                        padding: 0; 
+                        font-size: 9pt !important;
+                        line-height: 1.2 !important;
+                    }
+                    .resume-container { 
+                        box-shadow: none; 
+                        margin: 0; 
+                        padding: 0 !important; 
+                        transform: scale(0.85);
+                        transform-origin: top left;
+                        width: 118%;
+                    }
+                    .download-section { display: none !important; }
+                    .header { margin-bottom: 0.8cm !important; }
+                    .name { font-size: 18pt !important; margin-bottom: 3pt !important; }
+                    .contact-info { font-size: 8pt !important; }
+                    .section { margin-bottom: 0.4cm !important; }
+                    .section-title { font-size: 10pt !important; margin-bottom: 0.15cm !important; }
+                    .two-col-entry { margin-bottom: 0.05cm !important; }
+                    .highlights { margin-top: 0.05cm !important; }
+                    .highlights li { margin-bottom: 0.05cm !important; font-size: 8.5pt !important; }
+                    .one-col-entry { margin-bottom: 0.1cm !important; }
+                    .last-updated { display: none !important; }
+                    a { color: #0066cc !important; text-decoration: underline !important; }
+                }
+            `;
+        document.head.appendChild(printStyles);
+
+        // Trigger print dialog
+        setTimeout(() => {
+          window.print();
+        }, 100);
+
+        // Clean up after print
+        setTimeout(() => {
+          document.head.removeChild(printStyles);
+          downloadBtn.style.display = "block";
+        }, 2000);
+      }
+
+      // Method 2: Generate ATS-COMPATIBLE PDF with readable text
+      function downloadPDFWithLinks() {
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF("p", "mm", "a4");
+
+        // Enable text extraction for ATS
+        pdf.setProperties({
+          title: "Harshita Kshyp Resume",
+          subject: "Frontend Developer Resume",
+          author: "Harshita Kshyp",
+          keywords:
+            "Frontend Developer, React, Angular, TypeScript, JavaScript",
+          creator: "Resume Generator",
+        });
+
+        // Use standard fonts for better ATS compatibility
+        pdf.setFont("helvetica");
+
+        let yPosition = 15;
+        const margin = 15;
+        const rightMargin = 195;
+
+        // Header - ATS READABLE
+        pdf.setFontSize(18);
+        pdf.setFont("helvetica", "bold");
+        pdf.text("HARSHITA KSHYP", margin, yPosition);
+        yPosition += 8;
+
+        // Contact Info - ATS PARSEABLE FORMAT
+        pdf.setFontSize(10);
+        pdf.setFont("helvetica", "normal");
+        pdf.text("Email: hrsa.kshyp@gmail.com", margin, yPosition);
+        pdf.text("Phone: +91-9507860094", margin + 60, yPosition);
+        yPosition += 5;
+        pdf.text("Location: New Delhi, India", margin, yPosition);
+        yPosition += 5;
+        pdf.text("LinkedIn: linkedin.com/in/harshita-kshyp", margin, yPosition);
+        yPosition += 5;
+        pdf.text("GitHub: github.com/hrshita-kshyp", margin, yPosition);
+        pdf.text(
+          "Portfolio: portfolio-hrshita.vercel.app",
+          margin + 80,
+          yPosition
+        );
+        yPosition += 10;
+
+        // Professional Summary
+        pdf.setFontSize(12);
+        pdf.setFont("helvetica", "bold");
+        pdf.text("PROFESSIONAL SUMMARY", margin, yPosition);
+        yPosition += 6;
+
+        pdf.setFontSize(10);
+        pdf.setFont("helvetica", "normal");
+        const summaryLines = [
+          "Experienced Frontend Developer with 1+ years of professional experience at Tata Consultancy Services.",
+          "Specializing in React, Angular, and TypeScript development with proven track record of improving",
+          "application performance by 20% and admin workflow efficiency by 25%. Expert in JavaScript ES6+,",
+          "Redux state management, unit testing with Jest, and modern web development frameworks.",
+        ];
+
+        summaryLines.forEach((line) => {
+          pdf.text(line, margin, yPosition);
+          yPosition += 4;
+        });
+        yPosition += 4;
+
+        // Experience Section
+        pdf.setFontSize(12);
+        pdf.setFont("helvetica", "bold");
+        pdf.text("PROFESSIONAL EXPERIENCE", margin, yPosition);
+        yPosition += 6;
+
+        // Job 1
+        pdf.setFontSize(11);
+        pdf.setFont("helvetica", "bold");
+        pdf.text("FRONTEND DEVELOPER", margin, yPosition);
+        pdf.setFont("helvetica", "normal");
+        pdf.text("January 2025 - Present", margin + 120, yPosition);
+        yPosition += 4;
+
+        pdf.setFont("helvetica", "normal");
+        pdf.text(
+          "Tata Consultancy Services, New Delhi, India",
+          margin,
+          yPosition
+        );
+        yPosition += 5;
+
+        const job1Bullets = [
+          "• Developed Angular-based administrative features with reusable components and REST API integration",
+          "• Enhanced frontend application performance by 20% through lazy loading and optimization",
+          "• Authored comprehensive unit tests using Jest achieving 85%+ code coverage",
+          "• Collaborated with product managers and UX designers for responsive UI development",
+          "• Implemented CI/CD workflows using GitHub Actions for automated deployment",
+        ];
+
+        job1Bullets.forEach((bullet) => {
+          const wrappedText = pdf.splitTextToSize(bullet, 165);
+          pdf.text(wrappedText, margin, yPosition);
+          yPosition += wrappedText.length * 4;
+        });
+        yPosition += 3;
+
+        // Job 2
+        pdf.setFont("helvetica", "bold");
+        pdf.text("ASSISTANT SYSTEM ENGINEER TRAINEE", margin, yPosition);
+        pdf.setFont("helvetica", "normal");
+        pdf.text("October 2024 - December 2024", margin + 120, yPosition);
+        yPosition += 4;
+
+        pdf.text(
+          "Tata Consultancy Services, New Delhi, India",
+          margin,
+          yPosition
+        );
+        yPosition += 5;
+
+        const job2Bullets = [
+          "• Developed Airline Management System using Angular and Spring Boot",
+          "• Gained experience in agile software development and enterprise workflows",
+        ];
+
+        job2Bullets.forEach((bullet) => {
+          const wrappedText = pdf.splitTextToSize(bullet, 165);
+          pdf.text(wrappedText, margin, yPosition);
+          yPosition += wrappedText.length * 4;
+        });
+        yPosition += 5;
+
+        // Projects Section - 3 DETAILED PROJECTS
+        pdf.setFontSize(12);
+        pdf.setFont("helvetica", "bold");
+        pdf.text("TECHNICAL PROJECTS", margin, yPosition);
+        yPosition += 6;
+
+        // Project 1 - AI Content Generator
+        pdf.setFontSize(11);
+        pdf.setFont("helvetica", "bold");
+        pdf.text("AI Content Generator Platform", margin, yPosition);
+        pdf.setFont("helvetica", "normal");
+        pdf.text("React, Node.js, AI Analytics", margin + 100, yPosition);
+        yPosition += 5;
+
+        const proj1Bullets = [
+          "• Strategic content intelligence platform for complete business ecosystems",
+          "• Creates content campaigns using advanced AI algorithms and real-time collaboration",
+          "• Built with React architecture, Node.js backend, and integrated AI APIs",
+        ];
+
+        proj1Bullets.forEach((bullet) => {
+          const wrappedText = pdf.splitTextToSize(bullet, 165);
+          pdf.text(wrappedText, margin, yPosition);
+          yPosition += wrappedText.length * 4;
+        });
+        yPosition += 3;
+
+        // Project 2 - Cab Booking System
+        // pdf.setFont("helvetica", "bold");
+        // pdf.text("Cab Booking Management System", margin, yPosition);
+        // pdf.setFont("helvetica", "normal");
+        // pdf.text("Angular, Node.js, MongoDB", margin + 100, yPosition);
+        // yPosition += 5;
+
+        // const proj2Bullets = [
+        //   "• Full-stack application with real-time GPS tracking and dynamic fare calculation",
+        //   "• User authentication, admin dashboard, and secure payment gateway integration",
+        //   "• RESTful API architecture with ride history and rating system features",
+        // ];
+
+        // proj2Bullets.forEach((bullet) => {
+        //   const wrappedText = pdf.splitTextToSize(bullet, 165);
+        //   pdf.text(wrappedText, margin, yPosition);
+        //   yPosition += wrappedText.length * 4;
+        // });
+        // yPosition += 3;
+
+        // Project 3 - Portfolio Website
+        pdf.setFont("helvetica", "bold");
+        pdf.text("Professional Portfolio Website", margin, yPosition);
+        pdf.setFont("helvetica", "normal");
+        pdf.text("HTML5, Tailwind CSS, JavaScript", margin + 100, yPosition);
+        yPosition += 5;
+
+        const proj3Bullets = [
+          "• Modern responsive portfolio with smooth animations and theme toggle",
+          "• SEO optimized with contact form validation and project filtering",
+          "• Built with semantic HTML5, Tailwind CSS, and vanilla JavaScript",
+        ];
+
+        proj3Bullets.forEach((bullet) => {
+          const wrappedText = pdf.splitTextToSize(bullet, 165);
+          pdf.text(wrappedText, margin, yPosition);
+          yPosition += wrappedText.length * 4;
+        });
+        yPosition += 5;
+
+        // Education
+        pdf.setFontSize(12);
+        pdf.setFont("helvetica", "bold");
+        pdf.text("EDUCATION", margin, yPosition);
+        yPosition += 6;
+
+        pdf.setFontSize(11);
+        pdf.setFont("helvetica", "bold");
+        pdf.text("Bachelor of Technology (B.Tech)", margin, yPosition);
+        pdf.setFont("helvetica", "normal");
+        pdf.text("November 2020 - June 2024", margin + 120, yPosition);
+        yPosition += 4;
+
+        pdf.text("BIT Sindri, Dhanbad", margin, yPosition);
+        yPosition += 8;
+
+        // Certifications Section - REAL TCS + LINKEDIN CERTIFICATIONS
+        pdf.setFontSize(12);
+        pdf.setFont("helvetica", "bold");
+        pdf.text("CERTIFICATIONS", margin, yPosition);
+        yPosition += 6;
+
+        pdf.setFontSize(10);
+        pdf.setFont("helvetica", "normal");
+        const certifications = [
+          "• Angular Development Training - TCS Internal Training Program (2024)",
+          "• Full Stack Web Development - TCS Professional Development Course (2024)",
+          "• JavaScript Essential Training - LinkedIn Learning (2024)",
+          "• React.js Development - LinkedIn Learning (2024)",
+        ];
+
+        certifications.forEach((cert) => {
+          const wrappedText = pdf.splitTextToSize(cert, 165);
+          pdf.text(wrappedText, margin, yPosition);
+          yPosition += wrappedText.length * 4;
+        });
+        yPosition += 5;
+
+        // Combined Technical Skills & Soft Skills - ONE SECTION
+        pdf.setFontSize(12);
+        pdf.setFont("helvetica", "bold");
+        pdf.text("TECHNICAL SKILLS & KEY COMPETENCIES", margin, yPosition);
+        yPosition += 6;
+
+        pdf.setFontSize(10);
+        pdf.setFont("helvetica", "bold");
+        pdf.text("Programming Languages:", margin, yPosition);
+        pdf.setFont("helvetica", "normal");
+        pdf.text(
+          "JavaScript ES6+, TypeScript, HTML5, CSS3, SQL",
+          margin + 50,
+          yPosition
+        );
+        yPosition += 4;
+
+        pdf.setFont("helvetica", "bold");
+        pdf.text("Frontend Frameworks:", margin, yPosition);
+        pdf.setFont("helvetica", "normal");
+        pdf.text(
+          "React.js, Angular, Redux, Tailwind CSS, Bootstrap",
+          margin + 50,
+          yPosition
+        );
+        yPosition += 4;
+
+        pdf.setFont("helvetica", "bold");
+        pdf.text("Backend & Database:", margin, yPosition);
+        pdf.setFont("helvetica", "normal");
+        pdf.text(
+          "Node.js, Express.js, MongoDB, RESTful APIs",
+          margin + 50,
+          yPosition
+        );
+        yPosition += 4;
+
+        pdf.setFont("helvetica", "bold");
+        pdf.text("Development Tools:", margin, yPosition);
+        pdf.setFont("helvetica", "normal");
+        pdf.text(
+          "Git, GitHub, Jest, Webpack, CI/CD, GitHub Actions, Agile",
+          margin + 50,
+          yPosition
+        );
+        yPosition += 4;
+
+        pdf.setFont("helvetica", "bold");
+        pdf.text("Core Soft Skills:", margin, yPosition);
+        pdf.setFont("helvetica", "normal");
+        pdf.text(
+          "Problem Solving, Team Collaboration, Time Management",
+          margin + 50,
+          yPosition
+        );
+        yPosition += 6;
+
+        // Achievements
+        pdf.setFontSize(12);
+        pdf.setFont("helvetica", "bold");
+        pdf.text("ACHIEVEMENTS", margin, yPosition);
+        yPosition += 6;
+
+        pdf.setFontSize(10);
+        pdf.setFont("helvetica", "normal");
+        const achievements = [
+          "• Learning Achievement Award, TCS Gems program - recognized for contribution",
+          "• Open-source contributor during Hacktoberfest with 10+ contributions",
+          "• Increased coding club participation by 50% through workshops",
+        ];
+
+        achievements.forEach((achievement) => {
+          const wrappedText = pdf.splitTextToSize(achievement, 165);
+          pdf.text(wrappedText, margin, yPosition);
+          yPosition += wrappedText.length * 4;
+        });
+
+        // Save with ATS-friendly filename
+        pdf.save("Harshita_Kshyp_Resume_ATS_Compatible.pdf");
+      }
+
+      // Main download function - ATS OPTIMIZED
+      function downloadPDF() {
+        // Show ATS-optimized options
+        const userChoice = confirm(
+          "Choose PDF generation method:\n\n" +
+            "OK = ATS-Compatible PDF (recommended for job applications)\n" +
+            "Cancel = Print to PDF (preserves visual formatting)"
+        );
+
+        if (userChoice) {
+          downloadPDFWithLinks(); // Now generates ATS-compatible PDF
+        } else {
+          downloadPDFNative(); // Visual formatting preserved
+        }
+      }
+
+      // Add keyboard shortcut
+      document.addEventListener("keydown", function (e) {
+        if (e.ctrlKey && e.key === "p") {
+          e.preventDefault();
+          downloadPDF();
+        }
+      });
+    </script>
+  </body>
+</html>
